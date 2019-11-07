@@ -142,7 +142,7 @@ class Factory
      */
     public function users()
     {
-        $wheres = [
+        /*$wheres = [
             [$this->schema->objectClass(), Operator::$equals, $this->schema->objectClassUser()],
             [$this->schema->objectCategory(), Operator::$equals, $this->schema->objectCategoryPerson()],
         ];
@@ -152,9 +152,10 @@ class Factory
         // ActiveDirectory before adding this filter.
         if (is_a($this->schema, ActiveDirectory::class)) {
             $wheres[] = [$this->schema->objectClass(), Operator::$doesNotEqual, $this->schema->objectClassContact()];
-        }
+        }*/
 
-        return $this->where($wheres);
+        //return $this->where($wheres);
+        return $this->where([]);
     }
 
     /**
